@@ -147,7 +147,7 @@ function About() {
                     </li>
                   )}
                 </ul>
-                <a href={information.cvfile} className="mi-button">
+                <a href={information.cvfile} target ="_blank"className="mi-button">
                   Download CV
                 </a>
               </div>
@@ -156,7 +156,7 @@ function About() {
         </div>
       </div>
       <div className="mi-service-area mi-section mi-padding-top">
-        <div className="container">
+        {/* <div className="container">
           <Sectiontitle title="Services" />
           <div className="mi-service-wrapper">
             <div className="row mt-30-reverse">
@@ -170,7 +170,7 @@ function About() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* <div className="mi-review-area mi-section mi-padding-top mi-padding-bottom">
         <div className="container">

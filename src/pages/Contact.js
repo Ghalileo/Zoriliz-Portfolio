@@ -82,7 +82,7 @@ function Contact() {
             <div className="col-lg-6">
               <div className="mi-contact-formwrapper">
                 <h4>Get In Touch</h4>
-                <form
+                {/* <form
                   action="#"
                   className="mi-form mi-contact-form"
                   onSubmit={submitHandler}
@@ -139,7 +139,7 @@ function Contact() {
                       Send Mail
                     </button>
                   </div>
-                </form>
+                </form> */}
                 {handleAlerts()}
               </div>
             </div>
