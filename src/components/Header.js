@@ -30,7 +30,7 @@ function Header() {
                     </Link>
                 </div>
 
-                <ul className="mi-header-menu" style={{marginBottom: "125px"}}>
+                <ul className="mi-header-menu" >
                     <li><NavLink exact to="/"><span>Home</span></NavLink></li>
                     <li><NavLink to="/about"><span>About</span></NavLink></li>
                     <li><NavLink to="/resume"><span>Experience</span></NavLink></li>
