@@ -24,13 +24,13 @@ function Header() {
                 {!navigationToggler ? <LineIcon name="menu" /> : <LineIcon name="close" />}
             </button>
             <div className="mi-header-inner">
-                <div className="mi-header-image">
+                <div className="mi-header-image" >
                     <Link to="/">
                         <img src={information.brandImage} alt="brandimage" />
                     </Link>
                 </div>
 
-                <ul className="mi-header-menu">
+                <ul className="mi-header-menu" style={{marginBottom: "125px"}}>
                     <li><NavLink exact to="/"><span>Home</span></NavLink></li>
                     <li><NavLink to="/about"><span>About</span></NavLink></li>
                     <li><NavLink to="/resume"><span>Experience</span></NavLink></li>
