@@ -37,12 +37,22 @@ function Contact() {
       setMessage("You message has been sent!!!");
     }
   };
+
   const handleChange = (event) => {
     setFormdata({
       ...formdata,
       [event.currentTarget.name]: event.currentTarget.value,
     });
   };
+
+  // Reconstructed handleChange in the works
+  // function handleChange(e) {
+  //   setFormdata((prevState) => ({
+  //     ...prevState,
+  //     [e.target.name]: e.target.value,
+  //   }));
+  // }
+
   const numberFormatter = (number) => {
     const phnNumber = number;
     return phnNumber;
@@ -66,6 +76,65 @@ function Contact() {
     });
   }, []);
 
+  // const submitEmail = async (e) => {
+  //   e.preventDefault();
+  //   console.log({ formdata });
+  //   const response = await fetch("http://localhost:3001/send", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-type": "application/json",
+  //     },
+  //     body: JSON.stringify({ formdata }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then(async(res) => {
+  //       const resData = await res;
+  //       console.log(resData);
+  //       if (resData.status === "success") {
+  //         alert("Message Sent");
+  //       } else if (resData.status === "fail") {
+  //         alert("Message failed to send");
+  //       }
+  //     })
+  //     .then (() => {
+  //       setFormdata({
+  //         email: "",
+  //         name: "",
+  //         subject: "",
+  //         message: "",
+  //       });
+  //     });
+  // };
+
+  const submitEmail = async (e) => {
+    e.preventDefault();
+    console.log({ formdata });
+    const response = await fetch("http://localhost:3001/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ formdata }),
+    })
+      .then((res) => res.json())
+      .then(async (res) => {
+        const resData = await res;
+        console.log(resData);
+        if (resData.status === "success") {
+          alert("Message Sent");
+        } else if (resData.status === "fail") {
+          alert("Message failed to send");
+        }
+      })
+      .then(() => {
+        setFormdata({
+          email: "",
+          name: "",
+          message: "",
+        });
+      });
+  };
+
   return (
     <Layout>
       <Helmet>
@@ -82,10 +151,11 @@ function Contact() {
             <div className="col-lg-6">
               <div className="mi-contact-formwrapper">
                 <h4>Get In Touch</h4>
-                {/* <form
+                <form
+                  // onClick={submitEmail}
                   action="#"
                   className="mi-form mi-contact-form"
-                  onSubmit={submitHandler}
+                  onSubmit={submitEmail}
                 >
                   <div className="mi-form-field">
                     <label htmlFor="contact-form-name">Enter your name*</label>
@@ -139,7 +209,7 @@ function Contact() {
                       Send Mail
                     </button>
                   </div>
-                </form> */}
+                </form>
                 {handleAlerts()}
               </div>
             </div>
