@@ -1,64 +1,60 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const nodemailer = require ('nodemailer');
-const cors = require('cors');
-
 const app = express();
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(cors());
-
-app.get('/',()=>{
-    resizeBy.send('Welcome to my FormA')
-})
-
-app.post('/api/forma', (req, res)=>{
-
-    let data = req.body;
-    let smtpTransport = nodemailer.createTransport({
-        service: 'Gmail',
-        port: 465,
-        auth:{
-            user:'',
-            pass:''
-        }
-    })
-    let mailOptions = {
-        from: data.email, // sender address
-        to: "ose.okogbo@gmail.com", // list of receivers
-        subject: `Message from ${data.name}` , // Subject line
-        text: "Hello world?", // plain text body
-        html: `
-            <h3>Sender Details</h3>
-            <ul>
-                    <li>${data.name}</li>
-                    <li>${data.email}</li>
-                    <li>${data.subject}</li>
-                </ul>
-            <h3>Message</h3>
-            <p>${data.message}</p>`, // html body
-    }
-
-    smtpTransport.sendMail(mailOptions, (error,response) => {
-        if (error){
-            res.send(error)
-        }
-        else {
-            res.send(`success! YAAAY`)
-        }
-    })
-    smtpTransport.close
-})
-
-
-// const PORT = process.env.PORT || 5000;
+const cors = require("cors");
+require("dotenv").config();
 
 // //Middleware
-// app.get('/' , (req, res)=> {
-//     res.sendFile(_dirname + '/src/pages/Contact.js')
-// })
+app.use(express.json());
+app.use(cors());
 
-// app.listen(PORT, () =>{
-//     console.log(`server running on port ${PORT}`)
-// })
+let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth:{
+            type: "Oauth2",
+            user: process.env.EMAIL,
+            pass: process.env.WORD,
+            clientId: process.send.OAUTH_CLIENTID,
+            clientSecret: process.env.OAUTH_CLIENT_SECRET,
+            refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+        },
+    });
+
+    transporter.verify((err, success) => {
+        err
+          ? console.log(err)
+          : console.log(`=== Server is ready to take messages: ${success} ===`);
+       });
+
+       app.post("/send", function (req, res) {
+        let mailOptions = {
+          from: `${req.body.formData.email}`,
+          to: process.env.EMAIL,
+          subject: `Message from: ${req.body.formData.email}`,
+          text: `${req.body.formData.message}`,
+        };
+       
+        transporter.sendMail(mailOptions, function (err, data) {
+          if (err) {
+            res.json({
+              status: "fail",
+            });
+          } else {
+            console.log("== Message Sent ==");
+            res.json({
+              status: "success",
+            });
+          }
+        });
+       });
+     
+
+
+
+
+const PORT = process.env.PORT ||3001;
+app.listen(PORT, () =>{
+    console.log(`server starting on port ${PORT}`)
+})
+
+

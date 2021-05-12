@@ -152,7 +152,7 @@ function Contact() {
               <div className="mi-contact-formwrapper">
                 <h4>Get In Touch</h4>
                 <form
-                  // onClick={submitEmail}
+                  
                   action="#"
                   className="mi-form mi-contact-form"
                   onSubmit={submitEmail}
@@ -165,6 +165,7 @@ function Contact() {
                       name="name"
                       id="contact-form-name"
                       value={formdata.name}
+                      required
                     />
                   </div>
                   <div className="mi-form-field">
@@ -177,6 +178,7 @@ function Contact() {
                       name="email"
                       id="contact-form-email"
                       value={formdata.email}
+                      required
                     />
                   </div>
                   <div className="mi-form-field">
@@ -189,6 +191,7 @@ function Contact() {
                       name="subject"
                       id="contact-form-subject"
                       value={formdata.subject}
+                      required
                     />
                   </div>
                   <div className="mi-form-field">
@@ -202,6 +205,7 @@ function Contact() {
                       cols="30"
                       rows="6"
                       value={formdata.message}
+                      required
                     ></textarea>
                   </div>
                   <div className="mi-form-field">
