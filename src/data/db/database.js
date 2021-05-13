@@ -3,7 +3,7 @@ const linebreak = '\n';
 const database = {
   information: {
     name: 'Zoriliz Rivera',
-    aboutContent: "Sociologist.  Streamer.  Lover of all things dark & kawaii.",
+    aboutContent: "Sociologist.  Streamer.",
     age: 26,
     phone: '',
     nationality: 'American',

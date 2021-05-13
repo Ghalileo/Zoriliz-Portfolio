@@ -4,6 +4,7 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 
+
 // //Middleware
 app.use(express.json());
 app.use(cors());
@@ -14,7 +15,7 @@ let transporter = nodemailer.createTransport({
             type: "Oauth2",
             user: process.env.EMAIL,
             pass: process.env.WORD,
-            clientId: process.send.OAUTH_CLIENTID,
+            clientId: process.env.OAUTH_CLIENTID,
             clientSecret: process.env.OAUTH_CLIENT_SECRET,
             refreshToken: process.env.OAUTH_REFRESH_TOKEN,
         },
@@ -28,10 +29,10 @@ let transporter = nodemailer.createTransport({
 
        app.post("/send", function (req, res) {
         let mailOptions = {
-          from: `${req.body.formData.email}`,
+          from: `${req.body.formdata.name}`,
           to: process.env.EMAIL,
-          subject: `Message from: ${req.body.formData.email}`,
-          text: `${req.body.formData.message}`,
+          subject: `Message from: ${req.body.formdata.name}`,
+          text: `${req.body.formdata.message}`,
         };
        
         transporter.sendMail(mailOptions, function (err, data) {
