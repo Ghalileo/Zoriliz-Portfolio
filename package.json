@@ -2,21 +2,6 @@
   "name": "tf-react-chester",
   "version": "3.1.0",
   "dependencies": {
-<<<<<<< HEAD
-    "antd": "^4.15.5",
-    "axios": "^0.21.1",
-    "axios-mock-adapter": "^1.19.0",
-    "body-parser": "^1.19.0",
-    "bootstrap": "^4.6.0",
-    "disqus-react": "^1.0.7",
-    "express": "^4.17.1",
-    "fslightbox-react": "^1.6.2",
-    "node-sass": "^4.14.1",
-    "nodemailer": "^6.6.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-feather": "^2.0.9",
-=======
     "antd": "^4.15.4",
     "axios": "^0.19.0",
     "axios-mock-adapter": "^1.17.0",
@@ -30,7 +15,6 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-feather": "^2.0.3",
->>>>>>> c08b1e53458cde85690ee2ba6dfb114c72eea2e9
     "react-helmet": "^6.1.0",
     "react-lineicons": "^1.0.0",
     "react-markdown": "^4.3.1",
