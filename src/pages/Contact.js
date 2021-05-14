@@ -18,6 +18,7 @@ function Contact() {
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
 
+<<<<<<< HEAD
   const submitHandler = (event) => {
     event.preventDefault();
     if (!formdata.name) {
@@ -37,6 +38,27 @@ function Contact() {
       setMessage("You message has been sent!!!");
     }
   };
+=======
+  // const submitHandler = (event) => {
+  //   event.preventDefault();
+  //   if (!formdata.name) {
+  //     setError(true);
+  //     setMessage("Name is required");
+  //   } else if (!formdata.email) {
+  //     setError(true);
+  //     setMessage("Email is required");
+  //   } else if (!formdata.subject) {
+  //     setError(true);
+  //     setMessage("Subject is required");
+  //   } else if (!formdata.message) {
+  //     setError(true);
+  //     setMessage("Message is required");
+  //   } else {
+  //     setError(false);
+  //     setMessage("You message has been sent!!!");
+  //   }
+  // };
+>>>>>>> c08b1e53458cde85690ee2ba6dfb114c72eea2e9
 
   const handleChange = (event) => {
     setFormdata({
@@ -121,15 +143,25 @@ function Contact() {
         const resData = await res;
         console.log(resData);
         if (resData.status === "success") {
+<<<<<<< HEAD
           alert("Message Sent");
+=======
+          setMessage("Message Sent!");
+>>>>>>> c08b1e53458cde85690ee2ba6dfb114c72eea2e9
         } else if (resData.status === "fail") {
           alert("Message failed to send");
         }
       })
       .then(() => {
         setFormdata({
+<<<<<<< HEAD
           email: "",
           name: "",
+=======
+          name: "",
+          email: "",
+          subject: "",
+>>>>>>> c08b1e53458cde85690ee2ba6dfb114c72eea2e9
           message: "",
         });
       });
@@ -153,7 +185,11 @@ function Contact() {
                 <h4>Get In Touch</h4>
                 <form
                   
+<<<<<<< HEAD
                   action="#"
+=======
+                  // action="#"
+>>>>>>> c08b1e53458cde85690ee2ba6dfb114c72eea2e9
                   className="mi-form mi-contact-form"
                   onSubmit={submitEmail}
                 >
@@ -174,7 +210,7 @@ function Contact() {
                     </label>
                     <input
                       onChange={handleChange}
-                      type="text"
+                      type="email"
                       name="email"
                       id="contact-form-email"
                       value={formdata.email}
@@ -236,7 +272,7 @@ function Contact() {
                     </div>
                   </div>
                 )} */}
-                {!emailAddress ? null : (
+                {/* {!emailAddress ? null : (
                   <div className="mi-contact-infoblock">
                     <span className="mi-contact-infoblock-icon">
                       <Icon.Mail />
@@ -250,7 +286,7 @@ function Contact() {
                       ))}
                     </div>
                   </div>
-                )}
+                )} */}
                 {/* {!phoneNumbers ? null : (
                   <div className="mi-contact-infoblock">
                     <span className="mi-contact-infoblock-icon">

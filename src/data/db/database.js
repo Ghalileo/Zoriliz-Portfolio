@@ -3,7 +3,7 @@ const linebreak = '\n';
 const database = {
   information: {
     name: 'Zoriliz Rivera',
-    aboutContent: "Sociologist.  Streamer.  Lover of all things dark & kawaii.",
+    aboutContent: "Sociologist.  Streamer.",
     age: 26,
     phone: '',
     nationality: 'American',
@@ -16,7 +16,7 @@ const database = {
       twitter: 'https://twitter.com/zorilizrivera',
       pinterest: '',
       behance: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/zoriliz-rivera-6a264420a/',
       twitch: 'https://www.twitch.tv/zoriliz', 
       instagram: 'http://instagram.com/zoriliz', 
       dribbble: '',
