@@ -33,6 +33,14 @@ let transporter = nodemailer.createTransport({
           to: process.env.EMAIL,
           subject: `Message from: ${req.body.formdata.name}`,
           text: `${req.body.formdata.message}`,
+          html: `<h3>Message Contents</h3>
+                  <ul>
+                  <li>Name: ${req.body.formdata.name}</li>
+                  <li>Email: ${req.body.formdata.email}</li>
+                  <li>Subject: ${req.body.formdata.subject}</li>
+                  <li>Message: ${req.body.formdata.message}</li>
+                  </ul>
+          `
         };
        
         transporter.sendMail(mailOptions, function (err, data) {

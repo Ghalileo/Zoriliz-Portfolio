@@ -16,7 +16,7 @@ const database = {
       twitter: 'https://twitter.com/zorilizrivera',
       pinterest: '',
       behance: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/zoriliz-rivera-6a264420a/',
       twitch: 'https://www.twitch.tv/zoriliz', 
       instagram: 'http://instagram.com/zoriliz', 
       dribbble: '',

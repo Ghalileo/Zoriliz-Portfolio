@@ -121,7 +121,7 @@ function Contact() {
         const resData = await res;
         console.log(resData);
         if (resData.status === "success") {
-          alert("Message Sent");
+          setMessage("Message Sent!");
         } else if (resData.status === "fail") {
           alert("Message failed to send");
         }
@@ -166,7 +166,7 @@ function Contact() {
                       name="name"
                       id="contact-form-name"
                       value={formdata.name}
-                      
+                      required
                     />
                   </div>
                   <div className="mi-form-field">
@@ -175,11 +175,11 @@ function Contact() {
                     </label>
                     <input
                       onChange={handleChange}
-                      type="text"
+                      type="email"
                       name="email"
                       id="contact-form-email"
                       value={formdata.email}
-                      
+                      required
                     />
                   </div>
                   <div className="mi-form-field">
@@ -192,7 +192,7 @@ function Contact() {
                       name="subject"
                       id="contact-form-subject"
                       value={formdata.subject}
-                      
+                      required
                     />
                   </div>
                   <div className="mi-form-field">
@@ -206,7 +206,7 @@ function Contact() {
                       cols="30"
                       rows="6"
                       value={formdata.message}
-                      
+                      required
                     ></textarea>
                   </div>
                   <div className="mi-form-field">
@@ -237,7 +237,7 @@ function Contact() {
                     </div>
                   </div>
                 )} */}
-                {!emailAddress ? null : (
+                {/* {!emailAddress ? null : (
                   <div className="mi-contact-infoblock">
                     <span className="mi-contact-infoblock-icon">
                       <Icon.Mail />
@@ -251,7 +251,7 @@ function Contact() {
                       ))}
                     </div>
                   </div>
-                )}
+                )} */}
                 {/* {!phoneNumbers ? null : (
                   <div className="mi-contact-infoblock">
                     <span className="mi-contact-infoblock-icon">
