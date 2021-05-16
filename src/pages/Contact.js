@@ -109,7 +109,10 @@ function Contact() {
   const submitEmail = async (e) => {
     e.preventDefault();
     console.log({ formdata });
-    const response = await fetch("http://localhost:3001/send", {
+    let url;
+        process.env.NODE_ENV === 'production' ?  url = `https://zoriliz-rivera.herokuapp.com/send`
+            : url = "http://localhost:3001/send";
+    const response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
