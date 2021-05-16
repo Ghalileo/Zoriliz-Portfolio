@@ -1,6 +1,7 @@
 {
-  "name": "tf-react-chester",
+  "name": "Zoriliz-Portfolio",
   "version": "3.1.0",
+  "description": "The Portfolio of Zoriliz Rivera",
   "engines": {
     "node": "14.15.3"
   },
