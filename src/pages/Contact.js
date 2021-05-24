@@ -53,10 +53,10 @@ function Contact() {
   //   }));
   // }
 
-  const numberFormatter = (number) => {
-    const phnNumber = number;
-    return phnNumber;
-  };
+  // const numberFormatter = (number) => {
+  //   const phnNumber = number;
+  //   return phnNumber;
+  // };
 
   const handleAlerts = () => {
     if (error && message) {
@@ -126,7 +126,7 @@ function Contact() {
         if (resData.status === "success") {
           setMessage("Message Sent!");
         } else if (resData.status === "fail") {
-          alert("Message failed to send");
+          setMessage("Message failed to send");
         }
       })
       .then(() => {
