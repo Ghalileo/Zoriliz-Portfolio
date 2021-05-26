@@ -109,10 +109,9 @@ function Contact() {
   const submitEmail = async (e) => {
     e.preventDefault();
     console.log({ formdata });
-    // let url;
-    //     process.env.NODE_ENV === 'production' ?  url = `https://zoriliz-rivera.herokuapp.com/send`
-    //         : url = "http://localhost:3001/send";
-    let url = `http://localhost:3001/send`
+    let url;
+        process.env.NODE_ENV === 'production' ?  url = `https://zoriliz-rivera.herokuapp.com/send`
+            : url = "http://localhost:3001/send";
     const response = await fetch(url, {
       method: "POST",
       mode: "cors",
@@ -159,7 +158,7 @@ function Contact() {
             <div className="col-lg-6">
               <div className="mi-contact-formwrapper">
                 <h4>Get In Touch</h4>
-                <form
+                {/* <form
                   
                   // action="#"
                   className="mi-form mi-contact-form"
@@ -221,7 +220,7 @@ function Contact() {
                       Send Mail
                     </button>
                   </div>
-                </form>
+                </form> */}
                 {handleAlerts()}
               </div>
             </div>
@@ -244,7 +243,7 @@ function Contact() {
                     </div>
                   </div>
                 )} */}
-                {/* {!emailAddress ? null : (
+                {!emailAddress ? null : (
                   <div className="mi-contact-infoblock">
                     <span className="mi-contact-infoblock-icon">
                       <Icon.Mail />
@@ -258,7 +257,7 @@ function Contact() {
                       ))}
                     </div>
                   </div>
-                )} */}
+                )}
                 {/* {!phoneNumbers ? null : (
                   <div className="mi-contact-infoblock">
                     <span className="mi-contact-infoblock-icon">
