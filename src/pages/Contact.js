@@ -112,7 +112,7 @@ function Contact() {
     // let url;
     //     process.env.NODE_ENV === 'production' ?  url = `http://zoriliz-rivera.herokuapp.com/send`
     //         : url = "http://localhost:3001/send";
-    let url = "http://zoriliz-rivera.herokuapp.com/send";
+    let url = "https://zoriliz-rivera.herokuapp.com/send";
     const response = await fetch(url, {
       method: "POST",
       mode: "cors",
