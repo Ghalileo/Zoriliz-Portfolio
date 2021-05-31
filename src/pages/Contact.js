@@ -110,7 +110,7 @@ function Contact() {
     e.preventDefault();
     console.log({ formdata });
     let url;
-        process.env.NODE_ENV === 'production' ?  url = `https://zoriliz-rivera.herokuapp.com/`
+        process.env.NODE_ENV === 'production' ?  url = `http://zoriliz-rivera.herokuapp.com/send`
             : url = "http://localhost:3001/send";
     const response = await fetch(url, {
       method: "POST",
