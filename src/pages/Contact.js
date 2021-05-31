@@ -158,8 +158,8 @@ function Contact() {
           <div className="row">
             <div className="col-lg-6">
               <div className="mi-contact-formwrapper">
-                <h4>Get In Touch</h4>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScWcKpc9A36amBN-wZ69FNBOo9qBmgwYV0Tf6-MUHHV39d9QA/viewform?embedded=true" width="640" height="840" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                {/* <h4>Get In Touch</h4> */}
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePftEunNqyC6pNAgPqbemINc9hnRAkL5WoSwaMXbLijavrkQ/viewform?embedded=true" width="640" height="840" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 {/* <form
                   
                   // action="#"
