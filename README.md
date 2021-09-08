@@ -10,14 +10,10 @@
 
   Table of Contents |
   ----------------- |
-  Installation |
   Usage |
   Contribution |
   Licensing |
-  
 
-  # Installation 
-  
 
   # Usage 
   As a user living in the digital age, I WANT a digital portfolio to showcase my talents
@@ -25,7 +21,6 @@
   # Contribution 
   Oseghale, Ghalileo
 
-  # License 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+  
  
   
